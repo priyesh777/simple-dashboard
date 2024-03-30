@@ -18,9 +18,11 @@ function Register() {
         e.preventDefault();
         try {
             await registerUser(email, password, { name });
+            alert('Successfully Registered! Thanks !');
             navigate('/');
         } catch (error) {
             console.error("Registration error", error);
+            alert('Sorry, registration failed !');
         }
     };
 
